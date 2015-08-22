@@ -19,3 +19,6 @@ dependencies {
     // Needed for annotations support
     compile 'com.android.support:appcompat-v7:22.2.1'
 }
+
+// Push to maven
+apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'

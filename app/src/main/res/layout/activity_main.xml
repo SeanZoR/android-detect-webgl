@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="result"
+            type="com.seankatz.webgl.detect.app.BindableSupportLevel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/activityMainResultField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@{result.supportLevel}"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/activityMainLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/activityMainResultField"
+            android:paddingLeft="5dp"
+            android:text="@string/support_level_label"
+            android:textSize="15sp" />
+    </RelativeLayout>
+</layout>

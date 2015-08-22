@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">WebGL Detect App</string>
+
+    <string name="support_level_label">Device WebGL support level is:</string>
 </resources>

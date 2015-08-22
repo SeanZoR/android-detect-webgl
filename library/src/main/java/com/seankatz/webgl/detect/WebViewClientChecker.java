@@ -1,5 +1,7 @@
 package com.seankatz.webgl.detect;
 
+import android.annotation.TargetApi;
+import android.os.Build;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -9,12 +11,14 @@ public class WebViewClientChecker extends WebViewClient{
     public boolean noErrorRaised = true;
     private WebView mWebView;
 
+    @TargetApi(Build.VERSION_CODES.KITKAT)
     public WebViewClientChecker(OnReceiveDetectJsResult detectJsResult,
                                 OnFinishListener onFinishListener) {
         mDetectJsResult = detectJsResult;
         mOnFinishListener = onFinishListener;
     }
 
+    @TargetApi(Build.VERSION_CODES.KITKAT)
     @Override
     public void onPageFinished(WebView view, String url) {
         super.onPageFinished(view, url);

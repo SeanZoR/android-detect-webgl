@@ -1,13 +1,13 @@
-package com.seankatz.webgl.detect.app;
+package com.github.seanzor.webgl.detect.app;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.seankatz.webgl.detect.OnReceiveDetectJsResult;
-import com.seankatz.webgl.detect.WebGLDetector;
-import com.seankatz.webgl.detect.WebGLSupportLevel;
-import com.seankatz.webgl.detect.app.databinding.ActivityMainBinding;
+import com.github.seanzor.webgl.detect.OnReceiveDetectJsResult;
+import com.github.seanzor.webgl.detect.WebGLDetector;
+import com.github.seanzor.webgl.detect.WebGLSupportLevel;
+import com.github.seanzor.webgl.detect.app.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.seankatz.webgl.detect;
+package com.github.seanzor.webgl.detect;
 
 import android.webkit.ValueCallback;
 

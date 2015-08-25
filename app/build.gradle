@@ -6,7 +6,7 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "com.seankatz.webgl.detect.app"
+        applicationId "com.github.seanzor.webgl.detect.app"
         minSdkVersion 15
         targetSdkVersion 22
         versionCode 1

@@ -1,9 +1,9 @@
-package com.seankatz.webgl.detect.app;
+package com.github.seanzor.webgl.detect.app;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 
-import com.seankatz.webgl.detect.WebGLSupportLevel;
+import com.github.seanzor.webgl.detect.WebGLSupportLevel;
 
 public class BindableSupportLevel extends BaseObservable {
 
@@ -30,6 +30,6 @@ public class BindableSupportLevel extends BaseObservable {
 
     public void setSupportLevel(WebGLSupportLevel receivedSupportLevel){
         this.supportLevel = receivedSupportLevel;
-        notifyPropertyChanged(com.seankatz.webgl.detect.app.BR.supportLevel);
+        notifyPropertyChanged(com.github.seanzor.webgl.detect.app.BR.supportLevel);
     }
 }

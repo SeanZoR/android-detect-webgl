@@ -1,4 +1,4 @@
-package com.seankatz.webgl.detect;
+package com.github.seanzor.webgl.detect;
 
 /**
  * This enum holds the different possible support levels of WebGL

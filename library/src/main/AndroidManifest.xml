@@ -1,2 +1,2 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.seankatz.webgl.detect"/>
+    package="com.github.seanzor.webgl.detect"/>

@@ -1,5 +1,8 @@
 Android Detect WebGL
 ===============
+
+[![Build Status](https://travis-ci.org/SeanZoR/android-detect-webgl.svg)](https://travis-ci.org/SeanZoR/android-detect-webgl)
+
 Android Library to easily allow you to determine device's WebGL support level
 
 ## Download

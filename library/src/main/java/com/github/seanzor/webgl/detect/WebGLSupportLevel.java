@@ -13,7 +13,7 @@ package com.github.seanzor.webgl.detect;
 public enum WebGLSupportLevel {
     UNKNOWN(-2),
     NOT_SUPPORTED(-1),
-    SUPPORTED_BUT_DISABLED(0),
+    SUPPORTED_DISABLED(0),
     SUPPORTED(1);
 
     private int mStatusCode;

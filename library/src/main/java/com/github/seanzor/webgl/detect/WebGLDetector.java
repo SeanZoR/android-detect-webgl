@@ -15,7 +15,7 @@ public class WebGLDetector {
      * Use this method to start the detection of WebGL on the running device.
      * Behind the scenes this methods inflates a WebView in order to run in a web context,
      * it will then run the needed JavaScript methods to evaluate the WebGL State
-     * <p/>
+     *
      * <p>The result will be received in an Async manner
      *
      * @param activityContext The context of the {@link android.app.Activity},

@@ -5,8 +5,23 @@ import android.os.Build;
 import android.support.annotation.NonNull;
 import android.webkit.WebView;
 
+/***
+ * Wraps the WebGL detection process. To start the detection call
+ * {@link WebGLDetector#detect(Context, OnReceiveDetectJsResult)}
+ */
 public class WebGLDetector {
 
+    /***
+     * Use this method to start the detection of WebGL on the running device.
+     * Behind the scenes this methods inflates a WebView in order to run in a web context,
+     * it will then run the needed JavaScript methods to evaluate the WebGL State
+     *
+     * <p>The result will be received in an Async manner
+     *
+     * @param activityContext The context of the {@link android.app.Activity},
+     *                        will be used to inflate a WebView
+     * @param detectResult The result of the detection
+     */
     public static void detect(@NonNull Context activityContext,
                               @NonNull OnReceiveDetectJsResult detectResult) {
 
@@ -39,5 +54,5 @@ public class WebGLDetector {
         }
     }
 
-    public static final String BLANK_HTML_PAGE = "<!DOCTYPE html><html><head></head></html>";
+    static final String BLANK_HTML_PAGE = "<!DOCTYPE html><html><head></head></html>";
 }

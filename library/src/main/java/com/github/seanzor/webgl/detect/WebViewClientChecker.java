@@ -5,14 +5,14 @@ import android.os.Build;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class WebViewClientChecker extends WebViewClient{
+class WebViewClientChecker extends WebViewClient{
     private OnReceiveDetectJsResult mDetectJsResult;
     private final OnFinishListener mOnFinishListener;
-    public boolean noErrorRaised = true;
+    boolean noErrorRaised = true;
     private WebView mWebView;
 
     @TargetApi(Build.VERSION_CODES.KITKAT)
-    public WebViewClientChecker(OnReceiveDetectJsResult detectJsResult,
+    WebViewClientChecker(OnReceiveDetectJsResult detectJsResult,
                                 OnFinishListener onFinishListener) {
         mDetectJsResult = detectJsResult;
         mOnFinishListener = onFinishListener;

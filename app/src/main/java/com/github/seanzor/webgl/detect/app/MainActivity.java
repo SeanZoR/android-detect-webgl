@@ -11,7 +11,7 @@ import com.github.seanzor.webgl.detect.app.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    private BindableSupportLevel mBindableSupportLevel = new BindableSupportLevel();
+    final private BindableSupportLevel mBindableSupportLevel = new BindableSupportLevel();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

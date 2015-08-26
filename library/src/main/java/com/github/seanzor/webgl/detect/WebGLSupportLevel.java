@@ -6,7 +6,7 @@ package com.github.seanzor.webgl.detect;
  * <ul>
  *     <li>{@link WebGLSupportLevel#UNKNOWN UNKNOWN} could not determine WebGL support state, due to limitations or errors that were raised in the process
  *     <li>{@link WebGLSupportLevel#NOT_SUPPORTED NOT_SUPPORTED} WebGL is not supported at all on this device
- *     <li>{@link WebGLSupportLevel#SUPPORTED_BUT_DISABLED SUPPORTED_BUT_DISABLED} WebGL is supported but disabled, meaning you can't use it
+ *     <li>{@link WebGLSupportLevel#SUPPORTED_DISABLED SUPPORTED_DISABLED} WebGL is supported but disabled, meaning you can't use it
  *     <li>{@link WebGLSupportLevel#SUPPORTED SUPPORTED} WebGL is supported, go ahead.
  * </ul>
  */
@@ -16,12 +16,13 @@ public enum WebGLSupportLevel {
     SUPPORTED_DISABLED(0),
     SUPPORTED(1);
 
-    private int mStatusCode;
+    final private int mStatusCode;
 
     WebGLSupportLevel(int statusCode) {
         mStatusCode = statusCode;
     }
 
+    @SuppressWarnings("unused")
     public static WebGLSupportLevel findByCode(int code) {
         for (WebGLSupportLevel currEnumValue : values()) {
             if (currEnumValue.mStatusCode == code) {
@@ -31,6 +32,7 @@ public enum WebGLSupportLevel {
         return null;
     }
 
+    @SuppressWarnings("unused")
     public int getCode(){
         return mStatusCode;
     }

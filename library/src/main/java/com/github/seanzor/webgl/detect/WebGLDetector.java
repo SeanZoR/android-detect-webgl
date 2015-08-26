@@ -15,12 +15,12 @@ public class WebGLDetector {
      * Use this method to start the detection of WebGL on the running device.
      * Behind the scenes this methods inflates a WebView in order to run in a web context,
      * it will then run the needed JavaScript methods to evaluate the WebGL State
-     *
+     * <p/>
      * <p>The result will be received in an Async manner
      *
      * @param activityContext The context of the {@link android.app.Activity},
      *                        will be used to inflate a WebView
-     * @param detectResult The result of the detection
+     * @param detectResult    The result of the detection
      */
     public static void detect(@NonNull Context activityContext,
                               @NonNull OnReceiveDetectJsResult detectResult) {
@@ -42,17 +42,15 @@ public class WebGLDetector {
                 @Override
                 public void finishedJsDetection() {
                     // Kill the webview
-                    if (webView != null) {
-                        webView.clearHistory();
-                        webView.clearCache(true);
-                        webView.loadUrl("about:blank");
-                        webView.pauseTimers();
-                        webView.setWebViewClient(null);
-                    }
+                    webView.clearHistory();
+                    webView.clearCache(true);
+                    webView.loadUrl("about:blank");
+                    webView.pauseTimers();
+                    webView.setWebViewClient(null);
                 }
             }));
         }
     }
 
-    static final String BLANK_HTML_PAGE = "<!DOCTYPE html><html><head></head></html>";
+    static final private String BLANK_HTML_PAGE = "<!DOCTYPE html><html><head></head></html>";
 }

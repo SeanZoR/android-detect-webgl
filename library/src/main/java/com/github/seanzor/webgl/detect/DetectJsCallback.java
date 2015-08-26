@@ -25,7 +25,7 @@ class DetectJsCallback implements ValueCallback<String>{
                     result = WebGLSupportLevel.SUPPORTED;
                     break;
                 case "0":
-                    result = WebGLSupportLevel.SUPPORTED_BUT_DISABLED;
+                    result = WebGLSupportLevel.SUPPORTED_DISABLED;
                     break;
                 case "-1":
                     result = WebGLSupportLevel.NOT_SUPPORTED;

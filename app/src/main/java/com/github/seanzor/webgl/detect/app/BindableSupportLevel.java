@@ -9,6 +9,7 @@ public class BindableSupportLevel extends BaseObservable {
 
     private WebGLSupportLevel supportLevel;
 
+    @SuppressWarnings("unused")
     @Bindable
     public String getSupportLevel() {
         if (supportLevel == null) {
@@ -17,7 +18,7 @@ public class BindableSupportLevel extends BaseObservable {
             switch (supportLevel) {
                 case NOT_SUPPORTED:
                     return "Not supported :(";
-                case SUPPORTED_BUT_DISABLED:
+                case SUPPORTED_DISABLED:
                     return "Supported, but disabled :(";
                 case SUPPORTED:
                     return "Supported! :)";

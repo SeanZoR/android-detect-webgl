@@ -6,10 +6,9 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 class WebViewClientChecker extends WebViewClient{
-    private OnReceiveDetectJsResult mDetectJsResult;
+    final private OnReceiveDetectJsResult mDetectJsResult;
     private final OnFinishListener mOnFinishListener;
-    boolean noErrorRaised = true;
-    private WebView mWebView;
+    private boolean noErrorRaised = true;
 
     @TargetApi(Build.VERSION_CODES.KITKAT)
     WebViewClientChecker(OnReceiveDetectJsResult detectJsResult,
@@ -22,9 +21,6 @@ class WebViewClientChecker extends WebViewClient{
     @Override
     public void onPageFinished(WebView view, String url) {
         super.onPageFinished(view, url);
-
-        // Save the view for later, we will want to destroy it once we're finished
-        mWebView = view;
 
         // If the page is ready
         if (noErrorRaised) {
@@ -46,7 +42,7 @@ class WebViewClientChecker extends WebViewClient{
     /**
      * Detects if WebGL is enabled.
      * Inspired from http://www.browserleaks.com/webgl#howto-detect-webgl
-     * Source code avilable here: https://gist.github.com/SeanZoR/cfa7a6206983b775a858
+     * Source code available here: https://gist.github.com/SeanZoR/cfa7a6206983b775a858
      * <p/>
      * This code is in here, and not in Android Assets folder as expected because
      * libraries can't be wrapped with the assets within.
@@ -55,7 +51,7 @@ class WebViewClientChecker extends WebViewClient{
      * 0 for disabled
      * 1 for enabled
      */
-    String JS_CHECKER = "function detectWebGL()\n" +
+   final private String JS_CHECKER = "function detectWebGL()\n" +
             "{\n" +
             "    // Check for the WebGL rendering context\n" +
             "    if ( !! window.WebGLRenderingContext) {\n" +

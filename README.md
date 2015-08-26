@@ -8,7 +8,7 @@ Android Library to easily allow you to determine device's WebGL support level
 ## Download
 ```groovy
 dependencies {
-  compile 'com.seankatz.webgl.detect:library:1.0.0'
+  compile 'com.github.seanzor.webgl.detect:library:1.0.1'
 }
 ```
 

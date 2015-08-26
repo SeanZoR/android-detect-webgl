@@ -30,4 +30,8 @@ public enum WebGLSupportLevel {
         }
         return null;
     }
+
+    public int getCode(){
+        return mStatusCode;
+    }
 }

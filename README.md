@@ -3,6 +3,8 @@ Android Detect WebGL
 
 [![Build Status](https://travis-ci.org/SeanZoR/android-detect-webgl.svg)](https://travis-ci.org/SeanZoR/android-detect-webgl)
 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Android%20Detect%20WebGL-green.svg?style=flat)](https://android-arsenal.com/details/1/2398)
+
 Android Library to easily allow you to determine device's WebGL support level
 
 ## Download
